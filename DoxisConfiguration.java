@@ -4,7 +4,7 @@ import de.innovas.iaf.base_common.core.configuration.ConfigurationAccess;
 import de.innovas.iaf.base_common.core.configuration.IafConfiguration;
 
 /**
- * Konfigurationen für Doxis
+ * Konfigurationen fÃ¼r Doxis
  */
 public class DoxisConfiguration {
 
@@ -12,8 +12,6 @@ public class DoxisConfiguration {
    private ConfigurationAccess m_configuration;
 
    public static final String DOXIS_CONNECTION = "doxis.connection";
-   public static final String DOXIS_CONNECTION_DOT = DOXIS_CONNECTION + '.';
-   public static final String DOXIS_CONNECTION_REPOSITORY_ID = DOXIS_CONNECTION_DOT + "repositoryId";
    public static final String DOXIS_CONNECTION_URL = DOXIS_CONNECTION_DOT + "url";
    public static final String DOXIS_CONNECTION_USERNAME = DOXIS_CONNECTION_DOT + "username";
    public static final String DOXIS_CONNECTION_PASSWORD = DOXIS_CONNECTION_DOT + "password";
@@ -30,9 +28,11 @@ public class DoxisConfiguration {
 
    public String getRepositoryId() {
       return m_configuration.getValue(DOXIS_CONNECTION_REPOSITORY_ID, "BVA");
+      //Test Comment
    }
 
    public String getUser() {
+      
       return m_configuration.getValue(DOXIS_CONNECTION_USERNAME);
    }
 
@@ -44,6 +44,10 @@ public class DoxisConfiguration {
       return m_configuration.getValue(DOXIS_DOCUMENT_TYPE_UUID);
    }
 
+   public String testMethode() {
+      return "";
+   }
+   
    public String getCustomerName() {
       return m_configuration.getValue(CUSTOMER_NAME);
    }
